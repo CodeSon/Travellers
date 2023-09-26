@@ -1,0 +1,45 @@
+/* Styles for the main body */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Styles for the header */
+header {
+    background-color: #4CAF50; 
+    color: white;
+    text-align: center;
+    padding: 1em;
+}
+
+/* Styles for the announcements container */
+#announcements {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #e0e0e0;
+    border-radius: 5px;
+}
+
+/* Styles for the section headings */
+h2 {
+    background-color: #f4f4f4; 
+    margin-top: 20px;
+    padding: 0.5em;
+    color: #444;
+}
+
+/* Highlight important information */
+strong {
+    color: #0a7c3b; 
+}
+
+/* Styles for horizontal lines */
+hr {
+    border: none;
+    border-top: 1px solid #834a4a;
+    margin: 10px 0;
+}
