@@ -32,7 +32,7 @@ def fetch_train_and_ferry_info():
                     "limit": "6",
                     "FILTER": {},
                     "INCLUDE": [
-                        "AdvertisedTrainIdent", "Advertised", "Canceled", "LocationSignature",
+                        "TrainOwner","TrackAtLocation","AdvertisedTrainIdent", "Advertised", "Canceled", "LocationSignature",
                         "ScheduledDepartureDateTime", "EstimatedTimeAtLocation"
                     ]
                 },

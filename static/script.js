@@ -25,6 +25,7 @@ fetch('/api/train_ferry_info')
         // Process TrainAnnouncement
         const trainAnnouncements = data.RESPONSE.RESULT[0].TrainAnnouncement;
         if (trainAnnouncements && trainAnnouncements.length > 0) {
+            
             // Create a heading for train announcements.
             const trainHeading = document.createElement('h2');
             trainHeading.textContent = 'Train Announcements';
@@ -34,11 +35,14 @@ fetch('/api/train_ferry_info')
             trainAnnouncements.forEach(announcement => {
                 const announcementDiv = document.createElement('div');
                 announcementDiv.innerHTML = `
+                    
                     <strong>Train Number:</strong> ${announcement.AdvertisedTrainIdent} <br>
                     <strong>Location:</strong> ${announcement.LocationSignature} <br>
                     <strong>Scheduled Departure:</strong> ${formatDateTime(announcement.ScheduledDepartureDateTime)} <br>
                     <strong>Is Advertised:</strong> ${announcement.Advertised} <br>
                     <strong>Is Canceled:</strong> ${announcement.Canceled} <br>
+                    <strong>Train Owner:</strong> ${announcement.TrainOwner} <br> <!-- Add Train Owner -->
+                    <strong>Track At Location:</strong> ${announcement.TrackAtLocation} <br> <!-- Add Track At Location -->
                     <hr>
                 `;
                 container.appendChild(announcementDiv);
@@ -47,10 +51,12 @@ fetch('/api/train_ferry_info')
         // Process FerryAnnouncement
         const ferryAnnouncements = data.RESPONSE.RESULT[1].FerryAnnouncement;
         if (ferryAnnouncements && ferryAnnouncements.length > 0) {
+           
             // Create a heading for ferry announcements.
             const ferryHeading = document.createElement('h2');
             ferryHeading.textContent = 'Ferry Announcements';
             container.appendChild(ferryHeading);
+            
             // Iterate through ferry announcements and display them.
             ferryAnnouncements.forEach(announcement => {
                 const announcementDiv = document.createElement('div');
